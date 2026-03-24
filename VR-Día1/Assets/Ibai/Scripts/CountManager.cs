@@ -10,7 +10,8 @@ public class CountManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        puntosC = 0;
+        puntos.text = puntosC.ToString();
     }
 
     // Update is called once per frame
