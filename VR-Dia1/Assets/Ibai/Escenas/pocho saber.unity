@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9e4124f542dd644b9805fc75200d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countManager: {fileID: 1994384271}
+  countManager: {fileID: 0}
 --- !u!54 &1398161895
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1024,7 +1024,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994384272}
-  - component: {fileID: 1994384271}
   - component: {fileID: 1994384273}
   m_Layer: 0
   m_Name: GameManager
@@ -1033,20 +1032,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1994384271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994384270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fee1f7f3e97de0941a566d2cc7c1d8a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puntos: {fileID: 1531382093}
-  maxPuntos: 20
 --- !u!4 &1994384272
 Transform:
   m_ObjectHideFlags: 0
@@ -1076,8 +1061,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1401245954}
   target: {fileID: 6520732135953658630, guid: c554836638c678e44b9afe1e73cd156e, type: 3}
-  speed: 3
-  cooldown: 2
+  speed: 9
+  cooldown: 1
   distance: 20
   spawnPoint: {x: 0, y: 0, z: 0}
 --- !u!4 &2053129644 stripped
@@ -1207,7 +1192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9e4124f542dd644b9805fc75200d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countManager: {fileID: 1994384271}
+  countManager: {fileID: 0}
 --- !u!54 &2086971463
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -23,5 +23,10 @@ public class espada : MonoBehaviour
             countManager.Cubo();
             Destroy(collision.gameObject);
         }
+        else if(collision.gameObject.CompareTag("Bomba"))
+        {
+            countManager.Bomba();
+            Destroy(collision.gameObject);
+        }
     }
 }

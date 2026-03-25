@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class CountManager : MonoBehaviour
 {
@@ -7,9 +9,11 @@ public class CountManager : MonoBehaviour
     int puntosC;
     [SerializeField] int maxPuntos;
     bool fin;
+    public DropdownOption drop;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        puntos = GameObject.FindAnyObjectByType<TMP_Text>();
         puntosC = 0;
         puntos.text = puntosC.ToString();
     }
@@ -19,23 +23,48 @@ public class CountManager : MonoBehaviour
     {
         
     }
+    private void OnLevelWasLoaded()
+    {
+        puntos = GameObject.FindAnyObjectByType<TMP_Text>();
+    }
 
     public void Cubo()
     {
-        if (fin == false)
-        {
             puntosC++;
             puntos.text = puntosC.ToString();
             if (puntosC == maxPuntos)
             {
                 Terminar();
             }
-        }
+    }
+
+    public void Bomba()
+    {
+        puntosC -= 2;
+        puntos.text = puntosC.ToString();
     }
 
     void Terminar()
     {
         puntos.text = "Fin";
         fin = true;
+        Time.timeScale = 0;
+    }
+
+
+    public void SetTarget(int o)
+    {
+        if(o == 0)
+        {
+            maxPuntos = 10;
+        }
+        else if(o == 1)
+        {
+            maxPuntos = 20;
+        }
+        if(o == 2)
+        {
+            maxPuntos = 30;
+        }
     }
 }
