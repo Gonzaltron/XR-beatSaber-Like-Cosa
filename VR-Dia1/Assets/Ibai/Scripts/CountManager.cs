@@ -15,7 +15,7 @@ public class CountManager : MonoBehaviour
     void Start()
     {
         puntos = GameObject.FindAnyObjectByType<TMP_Text>();
-        puntosC = 1;
+        puntosC = 0;
         puntos.text = puntosC.ToString();
     }
     void Awake()
@@ -36,7 +36,7 @@ public class CountManager : MonoBehaviour
     public void Cubo()
     {
             puntosC++;
-            puntos.text = -1 +puntosC.ToString();
+            puntos.text = puntosC.ToString();
             if (puntosC == maxPuntos)
             {
                 Terminar();

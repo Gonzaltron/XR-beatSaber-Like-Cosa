@@ -23,7 +23,7 @@ public class SpawnerDificil : MonoBehaviour
         if(b >= 70 && actualCooldown >= cooldown)
         {
             spawnPoint.y = player.transform.position.y;
-            GameObject cube = Instantiate<GameObject>(target, this.transform.position, this.transform.rotation);
+            GameObject cube = Instantiate<GameObject>(bomba, this.transform.position, this.transform.rotation);
             cube.GetComponent<Cube>().player = player;
             cube.GetComponent<Cube>().speed = speed;
             cube.transform.position = spawnPoint;
