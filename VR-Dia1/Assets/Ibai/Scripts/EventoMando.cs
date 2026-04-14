@@ -4,10 +4,17 @@ using UnityEngine.InputSystem;
 public class EventoMando : MonoBehaviour
 {
     [SerializeField] private InputActionReference menuActionReference;
+    [SerializeField] Canvas menuUI;
+    bool time;
 
+    void Start()
+    {
+        menuUI.enabled = false;
+        Time.timeScale = 1;
+    }
     private void OnEnable()
     {
-        // Suscribirse al evento 'performed' (cuando se pulsa el botón)
+        // Suscribirse al evento 'performed' (cuando se pulsa el botï¿½n)
         menuActionReference.action.performed += OnMenuButtonPressed;
     }
 
@@ -19,7 +26,18 @@ public class EventoMando : MonoBehaviour
 
     private void OnMenuButtonPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("¡Botón Menú pulsado!");
-        // Aquí tu lógica para abrir/cerrar el menú
+        Debug.Log("Boton Menu pulsado!");
+        menuUI.enabled = !menuUI.enabled;
+        /*
+        time = !time;
+        if (time)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+        */
     }
 }

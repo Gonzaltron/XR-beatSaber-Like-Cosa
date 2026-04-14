@@ -4,16 +4,17 @@ public class espada : MonoBehaviour
 {
     
     [SerializeField] CountManager countManager;
+    Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rb = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log("Velocidad: " + rb.linearVelocity.magnitude);
     }
 
     private void OnTriggerEnter(Collider collision)

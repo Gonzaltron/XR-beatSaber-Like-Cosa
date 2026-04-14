@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ibai/Escenas/pocho saber dificil.unity
     guid: 814786bf4293ead489ab68993d2dc99f
+  - enabled: 1
+    path: Assets/Ibai/Escenas/Dir dificil.unity
+    guid: 6189c4294b1b8ac479b3f35975714cbe
+  - enabled: 1
+    path: Assets/Ibai/Escenas/Dir normal.unity
+    guid: 9c70786aae7bc824d8f4028d5f852697
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b2f66ec0e8682594f8b23570524987fd, type: 2}

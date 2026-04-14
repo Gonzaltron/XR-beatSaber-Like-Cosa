@@ -46,5 +46,14 @@ public class Sables : MonoBehaviour
         SceneManager.LoadScene("pocho saber dificil");
     }
 
+    public void Dir()
+    {
+        SceneManager.LoadScene("pocho saber dir");
+    }
+
+    public void DirDificil()
+    {
+        SceneManager.LoadScene("pocho saber dir dificil");
+    }
 
 }
